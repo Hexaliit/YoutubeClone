@@ -35,7 +35,7 @@
                     .then(response => {
                         if (response.data.success) {
                             localStorage.setItem('token' , response.data.data.token);
-                            this.$router.push('/home');
+                            this.$router.push('/');
                         } else {
                             this.errors = response.data.message;
                         }

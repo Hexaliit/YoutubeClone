@@ -49,21 +49,20 @@ class AuthController extends Controller
             //$user = Auth::user();
 
             $user = $request->user();
+            $success['user'] = $user;
             $success['token'] = $user->createToken('MyApp')->plainTextToken;
-            $success['name'] = $user->name;
 
             $response = [
                 'success' => true,
-                'data' => $success,
-                'message' => 'Login was successful ! ! !',
+                'data' => $success
             ];
+
             return response()->json($response,200);
         } else {
             $response = [
-                'success' => false,
-                'message' => 'Invalid Credentials',
+                'message' => 'Invalid Username or Password',
             ];
-            return response()->json($response,200);
+            return response()->json($response,401);
         }
     }
     public function get_user(){
