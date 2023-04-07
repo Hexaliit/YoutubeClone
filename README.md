@@ -70,6 +70,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - VueJs
 - VueRouter
 - Vuex
-- [momentJs] (https://momentjs.com/)
+- **[momentJS](https://momentjs.com)**
 - FFMPEG
-- [VideoJs] (https://videojs.com)
+- **[VideoJS](https://videojs.com)**
